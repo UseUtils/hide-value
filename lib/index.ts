@@ -59,3 +59,14 @@ export class HideValue {
     return hideValue.parseWithDefault(object);
   }
 }
+
+console.log(
+  HideValue.from(
+    {
+      name: "",
+      age: 23,
+      infos: {},
+    },
+    { useBoolean: true }
+  )
+);
