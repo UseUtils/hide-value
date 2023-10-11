@@ -1,0 +1,15 @@
+{
+  "collectCoverageFrom": ["<rootDir>/lib/**/*.ts"],
+  "coverageDirectory": "coverage",
+  "coverageProvider": "babel",
+  "moduleNameMapper": {
+    "@/tests/(.+)": "<rootDir>/test/$1",
+    "@/(.+)": "<rootDir>/lib/$1"
+  },
+  "testMatch": ["**/*.spec.ts"],
+  "roots": ["<rootDir>/lib", "<rootDir>/test"],
+  "transform": {
+    "\\.ts$": "ts-jest"
+  },
+  "clearMocks": true
+}
