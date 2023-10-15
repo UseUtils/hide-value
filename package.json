@@ -12,7 +12,10 @@
     "hide value",
     "hide object"
   ],
-  "author": "Andre Ferreira",
+  "author": {
+    "email": "delcferreira@gmail.com",
+    "name": "Andre Ferreira"
+  },
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^29.5.5",
