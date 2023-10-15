@@ -5,7 +5,7 @@
   "main": "lib/index.ts",
   "scripts": {
     "test": "jest",
-    "build": "rimraf dist && tsc --declaration",
+    "build": "tsc --declaration",
     "build:prod": "npm run build -- --project ./tsconfig.build.json"
   },
   "keywords": [
