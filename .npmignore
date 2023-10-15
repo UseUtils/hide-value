@@ -3,4 +3,9 @@ node_modules
 .eslintrc.json
 examples
 test
-.lib
+lib
+tsconfig.json
+tsconfig.build.json
+jest.config.json
+.gitignore
+.prettierrc
