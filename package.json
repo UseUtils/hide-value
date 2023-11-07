@@ -2,7 +2,8 @@
   "name": "@useutils/hide-value",
   "version": "0.1.4",
   "description": "Hide value",
-  "main": "./dist/index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "jest",
     "build": "tsc --declaration",
