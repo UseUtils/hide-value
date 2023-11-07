@@ -16,6 +16,9 @@
     "email": "delcferreira@gmail.com",
     "name": "Andre Ferreira"
   },
+  "engines": {
+    "node": "^20.9.0"
+  },
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^29.5.5",

@@ -9,3 +9,4 @@ tsconfig.build.json
 jest.config.json
 .gitignore
 .prettierrc
+.nvmrc

@@ -1,7 +1,7 @@
 export class HideValue {
-  private default: any = null;
+  private static default: any = null;
 
-  private parseWithDefault(object: any): any {
+  private static parseWithDefault(object: any): any {
     return Object.values(object).reduce((prev: any, curr: any, index: number) => {
       const key = Object.keys(object)[index];
 
@@ -18,7 +18,7 @@ export class HideValue {
     }, {});
   }
 
-  private parseWithBoolean(object: any): any {
+  private static parseWithBoolean(object: any): any {
     return Object.values(object).reduce((prev: any, curr: any, index: number) => {
       const key = Object.keys(object)[index];
 
@@ -35,18 +35,17 @@ export class HideValue {
     }, {});
   }
 
-  private setDefault(value: string) {
+  private static setDefault(value: string) {
     this.default = value;
   }
 
-  static from(object: any, options?: { default?: string; useBoolean?: boolean }) {
-    const hideValue = new HideValue();
-    options?.default && hideValue.setDefault(options?.default);
+  static from<T = any>(object: T, options?: { default?: string; useBoolean?: boolean }): T {
+    options?.default && HideValue.setDefault(options?.default);
 
     if (options?.useBoolean === true) {
-      return hideValue.parseWithBoolean(object);
+      return HideValue.parseWithBoolean(object);
     }
 
-    return hideValue.parseWithDefault(object);
+    return HideValue.parseWithDefault(object);
   }
 }
